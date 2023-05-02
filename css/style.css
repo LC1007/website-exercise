@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-color: tomato;
+}
+
+h1{
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    list-style: none;
+}
+
+.nav__links{
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    height: 50vh;
+}
+
+.intro__title{
+    font-size: 4rem;
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+.meet{
+    position: relative;
+    right: 10rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    animation: slide 5s;
+    animation-fill-mode: forwards;
+}
+
+.bg{
+    background-color: black;
+    width: 100vw;
+    height: 12vh;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.card{
+    width: 250px;
+    height: 250px;
+    background-color: chartreuse;
+    margin: 2rem;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card__front,
+.card__back{
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+
+.game__cover1{
+    background: url(https://cdn.shopify.com/s/files/1/0711/4235/products/PS1-Die-Hard-Trilogy-2-1.jpeg?v=1441785324) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.game__cover2{
+    background: url(https://images.pushsquare.com/games/ps1/crash_bandicoot/cover_large.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.game__cover3{
+    background: url(https://cdn.mobygames.com/covers/4189387-duke-nukem-time-to-kill-playstation-front-cover.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.game__cover4{
+    background: url(https://cdn.mobygames.com/covers/5990760-tekken-2-playstation-front-cover.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card1{
+    padding: 2rem;
+    transition: ease-in-out 0.3s;
+}
+
+.card1:hover{
+    transform: rotateY(180deg);
+}
+
+.card2{
+    padding: 2rem;
+    transition: ease-in-out 0.3s;
+}
+
+.card2:hover{
+    transform: rotateY(180deg);
+}
+
+.card3{
+    padding: 2rem;
+    transition: ease-in-out 0.3s;
+}
+
+.card3:hover{
+    transform: rotateY(180deg);
+}
+
+.card4{
+    padding: 2rem;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.card4:hover{
+    transform: rotateY(180deg);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+svg{
+    width: 3rem;
+    padding: 13px;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro{
+        margin: auto;
+        width: 20rem;
+        text-align: center;
+    }
+
+    .intro__title{
+        font-size: 1rem;
+    }
+
+    .intro__text{
+        font-size: 1rem;
+    }
+
+    .bg{
+        width: 100%;
+    }
+
+    .meet{
+        width: 25rem;
+        right: 0;
+        font-size: .9rem;
+        animation: mobile 5s;
+        text-align: center;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    @keyframes mobile {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+/* Animations */
+
+@keyframes slide {
+    0%{
+        right: 10rem;
+    }
+    100%{
+        right: -30rem;
+    }
+}
